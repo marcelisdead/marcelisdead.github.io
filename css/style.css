@@ -1,0 +1,394 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+padding:0;
+margin:0;
+font-family:courier new;
+font-weight:normal;
+height:100%;
+width:100%;
+background-color:gainsboro;
+text-align:center;
+color: black;
+position:relative;
+}
+
+*{
+padding:0;
+margin:0;
+outline:0;
+}
+
+h1,h2,h3,p{
+font-style:normal;
+font-weight:normal;
+font-size:medium;
+line-height:100%;
+margin-bottom:10px;
+}
+
+a:link{
+color:black;
+text-decoration:none;
+}
+
+a:visited{
+color:black;
+}
+
+a:hover{
+background:#369;
+color:white;
+text-shadow:none;
+}
+
+a:active{
+background:black;	
+color:white;
+}
+
+#wrapper{
+position:relative;
+vertical-align:middle;
+width:90%;
+margin:0 auto;
+display:block;
+max-width:825px;
+}
+
+#welcome{
+width: 300px;
+height: 400px;
+margin:15% auto;
+}
+
+#facebox{
+background-image:url('../images/facea.png');
+height:200px;
+width:200px;
+margin:0 auto;
+}
+
+#facebox img{
+display:none;
+}
+
+#welcome:hover #facebox img, #welcome.hover #facebox img, #welcome:active #facebox img,#welcome:focus #facebox img{
+display:block;
+}
+
+#nav {
+float:left;
+width:100%;
+position:relative;
+z-index:1000;
+margin:0 0 40px;
+}
+
+#nav ul {
+clear:left;
+float:right;
+list-style:none;
+position:relative;
+right:50%;
+}
+
+#nav ul li {
+display:block;
+float:left;
+list-style:none;
+position:relative;
+left:50%;
+}
+
+#nav ul li a{
+display:block;
+padding:10px;
+border-bottom:2px solid black;
+}
+
+a.active,a.active:hover {
+background:black;
+color:white;
+}
+
+#nav ul ul{
+display:none;
+width:200px;
+background:black;
+position:absolute;
+right:auto;
+z-index:1001;
+
+}
+
+#nav ul ul li{
+width:100%;
+left:auto;
+clear:left;
+z-index:1001;
+}
+
+#nav ul ul li a{
+padding:5px;
+color:gainsboro;
+border-bottom:1px solid dimgrey;
+}
+
+#nav ul li:hover ul, #nav ul li.hover ul, #nav li ul:active ul, #nav li ul:focus ul{
+display:block;
+}
+
+#nav ul li.iammarcel{
+display:block;
+padding:10px;
+border-bottom:2px solid black;
+}
+
+#search{
+border-bottom:2px solid black;
+}
+
+#q{
+font-size:medium;
+width:100px; 
+height:20px;
+background:gainsboro; 
+font-family:courier new; 
+border-style: none;
+margin: 8px 4px;
+padding:1px;
+}
+
+#q:hover, #q.hover, #q:active, #q:focus{
+border: 2px solid black;
+margin: 6px 2px;
+}
+
+#function div.title{
+float:right;
+}
+
+.title{
+margin:-100px 100 0;
+padding:0 0 25px;
+}
+
+.title a{
+padding:5px;
+border-bottom:1px solid black;
+}
+.title p{
+line-height:120%;
+}
+
+#function div.uni, #function div.multi{
+float:left;
+position:relative;
+}
+
+div.uni{
+margin:10px;
+}
+
+#function div span{
+display:none;
+}
+
+#function div.uni:hover img, #function div.uni:active img, #function div.uni:focus img{
+margin:-10px 10px 10px -10px;
+}
+
+#function div.multi:hover img, #function div.multi:active img, #function div.multi:focus img{
+margin:-10px 10px 10px -10px;
+}
+
+#function div:hover span, #function div:active span, #function div:focus span{
+display:block;
+position:absolute;
+top:100%;
+left:0;
+width:250px;
+height:250px;
+clear:both;
+z-index:20;
+background:rgba(256, 256, 256, 0.7);
+border:2px solid black;
+}
+
+#function div span{
+color:black;
+text-align:left;
+box-shadow:0px 18px 40px rgba(0, 0, 0, 0.7);
+}
+
+#function div span h2{
+text-align:center;
+background:black;
+color:white;
+padding:10px;
+margin-bottom:10px;
+}
+
+#function div span p{
+margin:10px;
+}
+
+#function div span h3{
+font-size:small;
+margin:10px;
+}
+
+#social{
+margin-top:25px;
+}
+
+ul,li{
+display:inline;
+float:left;
+}
+
+#statement{
+margin:40px 10% 0;
+width:80%;
+text-align:justify;
+}
+
+#statement p{
+line-height:120%;
+}
+
+#dropfunct{
+height:848px;
+}
+
+h1.tablet{
+font-size:130%;
+font-weight:100;
+color:rgba(0,0,0,0.8);
+letter-spacing:2px;
+width:220px;
+height:63px;
+text-align:center;
+background-image:url('../images/title.png');
+text-transform:uppercase;
+font-family:Helvetica;
+line-height:63px;
+padding:0 40px;
+margin:100px auto 15px;
+text-shadow:0px 0px 1px dimgrey, 0px 0px 2px dimgrey, 0px 0px 3px dimgrey, 0px 0px 3px dimgrey, 1px 1px silver;
+}
+
+h1.invisible{
+text-indent:-9999px;
+}
+
+#bio, #contact{
+background-repeat:no-repeat;
+background-position:0 0;
+text-shadow:0px 0px 1px dimgrey, 0px 0px 2px dimgrey, 0px 0px 3px dimgrey, 0px 0px 3px dimgrey, 0px 0px 3px dimgrey, 1px 1px silver, 2px 0px silver;
+margin:0 20px -25px;
+}
+
+#bio p, #contact p{
+line-height:150%;
+}
+
+#bio{
+float:left;
+background-image:url('../images/graveme.png');
+width:260px;
+height:245px;
+padding:190px 40px 0;
+}
+
+#dropinfo{
+height:85px;
+}
+
+#contact{
+float:right;
+background-image:url('../images/gravesmile.png');
+width:220px;
+height:230px;
+padding:120px 25px 0;
+}
+
+div.graver{
+float:right;
+border-bottom:30px solid black;
+margin:0 0 -30px;
+}
+
+div.gravel{
+float:left;
+border-bottom:30px solid black;
+margin:0 0 -30px;
+}
+
+#shows{
+border-top:30px solid black;
+padding:50px 0 0 0;
+text-align: left;
+}
+
+#shows dt{
+float:left;
+width:20%;
+}
+
+#shows dd{
+float:left;
+width:80%;
+}
+
+div.nothing{
+height:396px;
+width:306px;
+margin:10px;
+display:inline-block;
+vertical-align:top;
+}
+
+div.nothing img{
+border:2px solid black;
+}
+
+#drawno h1.tablet{
+line-height:31px;
+}
+
+a.friend{
+vertical-align:top;
+display:inline-block;
+width:124px;
+height:200px;
+margin:10px;
+border-bottom:2px solid black;
+}
+
+a.friend a{}
+
+a.friend img{
+border:2px solid black;
+height:80px;
+width:120px;
+overflow:hidden;
+margin-bottom:20px;
+}
+
+#footer{
+width:100%;
+margin:100px 0 0;
+padding:20px 0 10px;
+border-top:2px solid black;
+}
+
+#footer a{
+padding:10px;
+}
+
+#clear{
+clear:both;
+}
