@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Newsletter Signup</title>
+		<meta charset="UTF-8"> 
+		<link type="text/css" rel="stylesheet" href="css/reset.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/default.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/index.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/input.css" media="all" />
+	</head>
+	
+	<body>	
+	
+		<div id="header"></div>
+
+		<div id="content">
+			<div id="container">	
+			
+				<h1 id="title">Newsletter Signup</h1>
+				<form id="form" method="get" onsubmit="javascript: return SubmitForm();" enctype="text/plain">
+					<label for="name">Name</label>
+					<input  type="text" name="name" maxlength="50" size="30" value="" >
+					<label for="email">Email</label>
+					<input  type="text" name="email" maxlength="80" size="30" value="">
+					<input type="submit" value="Submit">
+				</form>
+				
+			</div>
+		</div>
+
+		<div id="footer"></div>
+
+		<script src="js/main.js" defer></script>
+
+		<script>
+			function SubmitForm() {
+				// Set the mailto action for sending the email
+				const form = document.forms['form'];
+				form.action = 'mailto:marcelisdead@gmail.com';
+				form.target = '_self'; // Optional: Ensure it opens in the same tab
+
+				// Temporarily submit the form to send the email
+				form.submit();
+
+				// Redirect to the confirmation page after a short delay to ensure email action completes
+				setTimeout(() => { window.location.href = 'newsletterThankYou.html'; }, 1000); // 1-second delay 
+
+				// Prevent the default behavior
+				return false;
+			}
+		</script>
+
+	</body>		
+</html>

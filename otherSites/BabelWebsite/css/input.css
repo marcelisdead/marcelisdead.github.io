@@ -1,0 +1,78 @@
+#content{
+	letter-spacing: 0.15vmin;
+	display: flex;
+	align-items: center;
+	/*background-color: green;*/
+}
+
+#container{
+	border-radius: 5vmin;
+	margin: 0 auto 5vh;
+	width: 80vmin;
+	padding: 8vh 0;
+	background-color: gainsboro;
+	display: flex;
+	flex-direction: column;
+
+}
+
+form {
+	width:100%;
+	/*margin: 0 auto;*/
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	line-height: 10vmin;
+	justify-content: space-evenly;
+	/*background-color: yellow;*/
+}
+
+label {
+	width: 36%;
+	text-align: right;
+	/*padding-right: 4%;*/
+	/*background-color: green;*/
+  }
+  
+label ::after {
+    content: ":";
+}
+
+.info {
+	margin: 0 auto;
+	width: 90%;
+	text-align: left;
+	overflow-wrap: break-word;
+	line-height: 5vh;
+}
+
+#error{
+	color: red;
+	display: none; /* will be set to inline onclick */
+}
+
+input{
+	width: 40vmin;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 4vmin;
+	letter-spacing: 0.12vmin;
+	
+}
+
+input:active{
+	border: 1px solid grey;
+}
+
+input[type=submit]{
+	background-color: white;
+	border: 1px solid grey;
+	width: 20vmin;
+	height: 8vmin;
+}
+input[type=submit]:hover{
+	border-color: black;
+}
+
+input[type=submit]:active{
+	border: 1px solid grey;
+}

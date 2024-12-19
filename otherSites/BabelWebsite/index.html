@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Babel Company</title>
+		<meta charset="UTF-8"> 
+		<link type="text/css" rel="stylesheet" href="css/reset.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/default.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/index.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/cookies.css" media="all" />
+	</head>
+	
+	<body>	
+		<div id="cookiePopup">
+			<div id="lockLogo" ></div>
+			<div id="cookieMessage">
+				<p>We use cookies to personalize and enhance your experience on our site. Visit our Privacy Policy to learn more or manage your personal preferences in our Cookie Consent Tool. By using our site, you agree to our use of cookies.</p>
+			</div>
+				
+			<a href="#">
+			<div id="acceptButton" onclick="ToggleId('cookiePopup'); return false;">
+				<p>Accept</p>
+			</div>
+			</a>
+		</div>
+	
+		<div id="header"></div>
+
+		<div id="content">
+			<div id="container">	
+			
+				<h1 id="title">Babel Company</h1>
+				<div id="world" ></div>
+				
+			</div>
+		</div>
+
+		<div id="footer"></div>
+
+		<script src="js/main.js" defer></script>
+
+		<script>
+			window.onload = function(){ToggleId('cookiePopup');};
+
+			function ToggleId(string) {
+				var element = document.getElementById(string);
+				//if (element.style.display === "flex") {
+				if (window.getComputedStyle(element,null).getPropertyValue("display") == "flex") {
+					element.style.display = "none";
+				} else {
+					element.style.display = "flex";
+				}
+			}
+		</script>
+
+	</body>		
+</html>

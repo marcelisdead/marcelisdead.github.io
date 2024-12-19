@@ -399,3 +399,16 @@ clear:both;
     width:500px;
     height:250px;
 }
+
+.talkbubble{
+    border-radius: 15px;
+    color: white;
+    background: black;
+    padding-top: 40px;
+    width: 180px;
+    height: 130px;
+    position:relative;
+    z-index: 10;
+    left: 290px;
+    top: 200px;
+}

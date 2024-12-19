@@ -1,0 +1,178 @@
+body,html{
+	overflow-x: hidden;
+}
+
+body{
+	background-color: white;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3vh;
+	line-height: 3vh
+}
+
+a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+	letter-spacing: 0.4vmin;
+	font-size: 3vh;
+}
+
+a:visited{
+	color: dimgrey;
+}
+
+header{
+	width: 100%;
+	height: 10vmin;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5vh;
+}
+
+
+#babelLogoHead {
+	width: calc(10vmin * 1.67);
+	height: 10vmin;
+	background-image: url('../images/babel_logo.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-left: 5vh;
+}
+
+#navButton{
+	width: 8vmin;
+	height: 8vmin;
+	margin-right: 5vh;
+	background-image: url('../images/lines.png');
+	background-repeat: no-repeat;
+    background-size: 100%;
+	background-position: 100%;
+}
+
+
+nav{
+z-index: 8;
+	position: absolute;
+	top:calc(5vh + 8vmin);
+	right:5vh;
+	display: none;/* flex without clicking*/
+	flex-direction: column;
+	
+	background-color: white;
+	width: 50vw;
+}
+
+
+nav div a{
+	font-size: 4vmin;
+}
+nav div{
+	height: 10vmin;
+	line-height: 10vmin;
+	margin: 2vmin 4vmin;
+}
+
+nav a:hover{
+	color: grey;
+}
+
+
+#content{
+	min-height: calc(95vh - 10vmin);
+	width: 100vw;
+	
+}
+
+h1{
+	font-size: 4vh;
+	letter-spacing: 0.2vmin;
+	text-transform: uppercase;
+	margin: 0 auto 5vh;
+	text-align: center;
+	width: 100%
+}
+
+
+footer{
+	border-top: 3px solid black;  
+	border-image-source: linear-gradient(to right, transparent 10%, black 50%, transparent 90%);
+	border-image-slice: 10;
+	width: 100vw;
+	padding: 5vh;
+	display: flex;
+}
+
+#babelLogoFoot{
+	width: 10vmin;
+	height: 10vmin;
+	
+	background-image: url('../images/babel_logo.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 90%;
+}
+
+#footerInfo{
+	width: calc(100vw - 20vmin);
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+footer ul{
+	margin: 4vmin;
+}
+footer li{
+	margin: 3vmin;
+	text-align: left;
+}
+
+
+
+footer a:hover{
+	text-decoration: underline;
+}
+
+.social{
+	margin: 5vh;
+	margin-left:auto;
+	display:flex;
+	/*background-color: red;*/
+}
+
+.social a {
+	/*background-color: orange;*/
+	height:6vmin;
+	width:6vmin;
+	background-image: url('../images/social_black.png');
+	background-repeat: no-repeat;
+    background-size: 400% 200%;
+	background-position: 0% 100%;
+
+}
+
+.social a:active, .social a:visited{
+	background-image: url('../images/social_grey.png');
+}
+
+#twitter{
+	background-position: 0% 0%;
+}
+#instagram{
+	background-position: 33.33% 0;
+}
+#facebook{
+	background-position: 66.67% 0%;
+}
+#youtube{
+	background-position: 100% 0%;
+}
+#snapchat{
+	background-position: 0% 100%;
+}
+#linkedin{
+	background-position: 66.67% 100%;
+}

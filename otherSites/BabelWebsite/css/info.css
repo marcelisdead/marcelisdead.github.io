@@ -1,0 +1,99 @@
+#content{
+	letter-spacing: 0.15vh;
+	display: flex;
+	align-items: center;
+	/*background-color: green;*/
+}
+
+#container{
+	border-radius: 5vmin;
+	margin: 5vh auto 5vh;
+	width: 80vw;
+	padding: 8vh 0;
+	background-color: gainsboro;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.info a{
+	text-decoration: underline;
+	text-transform: none;
+	/*color: whitesmoke;*/
+	letter-spacing: 0.35vh;
+	font-size: 3vh;
+}
+
+.info {
+	margin: 0 auto;
+	width: 90%;
+	text-align: left;
+	overflow-wrap: break-word;
+	line-height: 5vh;
+}
+
+.first{
+	margin-left:4vmin;
+}
+.second{
+	margin-left:8vmin;
+}
+
+.group{
+	padding:3vh 0;
+	/*background-color: green;*/
+}
+
+p{
+	margin-bottom: 4vmin;
+	
+}
+
+h2,h3,h4{
+	text-transform: uppercase;
+	margin: 2vmin 0;
+}
+
+h2{
+	font-weight: bold;
+	margin-top: 8vmin;
+}
+
+.info ul{
+	list-style-type: disc;
+	margin-left:8vmin;
+}
+
+.info li{
+	margin-bottom:2vmin;
+`	
+}
+
+.info p{
+	/*text-align: justify;*/
+}
+
+.img{
+	
+	width: 50vmin;
+	height: 30vmin;
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	float:right;
+	border: 3px solid dimgrey;
+}
+
+#together{
+	background-image: url('../images/together.png');
+	margin: 0 0 3vmin 5vmin;
+}
+#future{
+	background-image: url('../images/kid_point.png');
+	margin: 0 0vh 3vmin 5vmin;
+}
+#human{
+	margin: 0 5vmin 3vmin 0;
+	float: left;
+	background-image: url('../images/crowd.png');
+}

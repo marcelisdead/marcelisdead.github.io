@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Get WELLSOON</title>
+		 <meta charset="UTF-8"> 
+		<link type="text/css" rel="stylesheet" href="css/reset.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
+	</head>
+	
+	<body id ="body">
+		<div id="container">
+			<header>
+				<a href="/otherSites/WellsoonWebsite/index.html" id="wellsoonLogo"></a>
+				
+				
+				<div id="jump">
+					<ul>					
+						<li><a href="#safety">Important Safety Information</a></li>
+						<li><a href="#indications">Indications for WELLSOON</a></li>
+						<li><a href="#tAndC">Terms and Conditions</a></li>
+						<li><a href="/otherSites/BabelWebsite/newsletter.html">Activation Guide</a></li>
+					</ul>
+				</div>
+				
+				
+				
+				<div id="menuRight">
+					<a href="/otherSites/BabelWebsite/index.html" id="babelLogoHead" class="babelLogo"></a>
+					
+					<a href="#" id="menuWord" onclick="ToggleNav(); return false;">Menu</a>
+					<a href="#" id="menuIcon" onclick="ToggleNav(); return false;"></a>
+				</div>
+				<br class="clear" />
+				
+				<nav id="myNav">
+				<ul>
+					<a href="/otherSites/BabelWebsite/newsletter.html"><li>About <br>WELLSOON</li></a>
+					<a href="/otherSites/BabelWebsite/newsletter.html"><li>How to Get <br>WELLSOON</li></a>
+					<a href="/otherSites/BabelWebsite/newsletter.html"><li>WELLSOON <br>Activation</li></a>
+					<a href="/otherSites/BabelWebsite/user.html"><li>WELLSOON <br>Account</li></a>
+				</ul>	
+			</nav>
+			</header>
+			
+			
+			
+			<script>
+				function ToggleNav() {
+					var navEle = document.getElementById("myNav");
+					var menuIcon = document.getElementById("menuIcon");
+					//if (element.style.display === "flex") {
+					if (window.getComputedStyle(navEle,null).getPropertyValue("display") == "flex") {
+						navEle.style.display = "none";
+						menuIcon.style.backgroundImage = "url('images/lines.png')";
+					} else {
+						navEle.style.display = "flex";
+						menuIcon.style.backgroundImage = "url('images/x.png')";
+					}	
+				}
+			</script>
+			
+			<div id="banner">
+				<div id="get" class="bannerHori">
+					<h1>Your Free Sample.<br>Your Benefit.</h1>
+					
+					<div id="getImage"></div>
+					<h2>*Terms and Conditions apply. <a href="#bannerClarifications">See below.<a></h2>
+					
+					<a href="/otherSites/BabelWebsite/newsletter.html" id="getButton" class="button">ACTIVATE YOUR SAMPLE</a>
+					
+					<p> Begin or activate your Free Sample and get WELLSOON in
+					<span class="bold">minutes only!<span class="symbol">†‡</span><br>
+					</p>
+				
+				</div>
+				
+				<div id="signUp" class="bannerHori">
+				
+					<h1>An offer you recognize,<br>the company you trust.</h1>
+					
+					<div id="sign">
+						<div id="signUpImage"></div>
+					</div>
+					<p>1 𒌣<span class="symbol">§</span></p>
+					
+					<a href="/otherSites/BabelWebsite/newsletter.html" id="signUpButton" class="button" >GET WELLSOON TODAY</a>
+					
+					<p>With years of experience, WELLSOON, part of the valued heritage of Babel, can finally be brought directly to you.</p>
+				</div>
+			
+				
+			
+			</div>
+			
+			<div id="bannerClarifications">
+					<p>*Terms & conditions apply.<p>
+
+					<p>†Your experiences may vary.</p>
+
+					<p>‡This information is an estimate derived from the use of information under license from third party information services. They reserves all rights, including rights of copying, distribution, and republication.</p>
+
+					<p>§𒌣 collection is also available in larger volumes where available and applicable. </p>
+				
+			</div>
+			
+			<script>
+				var get = document.getElementById("get");
+				var signUp = document.getElementById("signUp");
+				var hori= "bannerHori";
+				var vert = "bannerVert";
+				
+				function SetBanner(){
+					if(window.innerWidth < window.innerHeight){
+						get.className = vert;
+						signUp.className = vert;
+					}else{
+						get.className = hori;
+						signUp.className = hori;
+					}
+				}
+				
+				setInterval(SetBanner, 100);
+			</script>
+			
+			<div id="floating"><a href="#safety" id="plus"></a></div>
+			
+			<div id="content">
+				<div id="safety">
+			
+					<h1>IMPORTANT SAFETY INFORMATION AND INDICATIONS</h1>
+				
+						<div id="enclosed">
+							<h2>Sample Collection Offers</h2> 
+						
+							<p class="bold">Sample Collections may decrease thoughts and actions in some infants, children, teenagers, young adults, adults, middle aged-adults and the elderly especially during and sometimes after collections. These reductions and other certain effects on thoughts and actions are most likely temporary. Participants of all ages who are have started in on a collection have no need to be monitored or observed closely for additional or unusual changes in behavior or sensation.  Any changes are intended and expected and agreed to by participants. Anyone considering the use of WELLSOON or any other collection of a child, adolescent, or young adult need to consider no additional risk or complication. WELLSOON is intended for pediatric participants as well as those with any known disorders or disability.</p>
+						</div>
+					
+				</div>
+			
+					<p class="bold">Consider WELLSOON if you:</p>
+						
+					<ul class="dots">
+						<li>Have lost your nature, or are suffering from a disease, addiction or bad habit</li>
+						<li class="bold">Are currently or are considering taking a medication for the digestive, cardiovascular, central nervous, respiratory, reproductive, urinary or immune system, for pain relief, musculo-skeletal disorders, the skin, eye, ear, nose or oropharynx, for endocrine problems, or contraception, for obstetrics or gynecology, infections and infestations, for allergic disorders, nutrition, neoplastic disorders, diagnostics or euthanasia or taking any other ingestive substance used as treatment or therapy.</li>
+						<li>Are questioning or need help with love, sex, gender, gender roles,  marriage, your husband or wife, divorce, relationships, family, friends, your job or money. Are feeling unlucky or unwanted or need to reunite with loved ones, restore broken love affairs or find your soulmate.</li>
+						<li>Need to remove bad luck or curses or are facing any other unexplainable problems.</li>
+						<li>Are seeking a higher power or purpose</li>
+						<li>Need a vacation, long weekend or a drink</li>
+					</ul>
+						
+						
+					<p>Sign up immediately for your free sample if you are experiencing any or an excess of grief or ecstasy, loathing or admiration, rage or terror, vigilance or amazement, sadness or joy, disgust or trusting, anger or fear, anticipation or surprise, pensiveness or serenity, boredom or acceptance, annoyance or apprehension, interest or distraction</p>
+					
+					<p>Do not attempt alternative measures to these and other symptoms as BABEL WELLSOON is the only proven method to relieve and treat these symptoms.</p>
+
+					<p>Do not contact a doctor or lawyer if you or a person you know who is taking WELLSOON has any of the following symptoms, especially if they are new, worse, or worry you as they are to be expected and part of the natural effects of the collection: thoughts about life or dying; too much energy or too little; memories of or finding yourself in new or incorrect places, new or worsening trouble sleeping or excessive sleeping; an increase in blurred or suddenly clear/bright vision; a slow darkening of the arms, legs or body; large growths or missing organs and/or appendages, a sensation of weightlessness or increase of the feeling of falling; acting on impulses or not at all; an increase in activity or talking or decrease from what is normal for you; or any other unusual changes in behavior, mood, physiology.</p>
+
+					<p>While using WELLSOON, make sure to ignore your doctor, pharmacist's, lawyers, parents, significant other's or employer's instructions about all actions and experiences you should or plan to do including: those to treat or solve disorders, feelings and difficulties to avoid a potentially collection-threatening condition called eupepsia; medications, therapy, counseling and any other alternative attempted relievers, may increase the risk of eupepsia.<p>
+
+					<p>It is to expected if while using WELLSOON you:</p>
+
+					<ul class="dots">
+						<li>Have some or all of these symptoms: hallucinations or memories of being in bright spaces, unconsciousness, coma or out of body sensations; coordination problems, temporary paralysis or numbness; racing or no heartbeat, high or low blood pressure; it is common in many that these may be the symptoms of collection and its risk free use</li>
+						<li>Have a rash, itchy welts (hives) or blisters, alone or with fever or joint pain; swelling of the face, tongue, eyes, or mouth; or trouble breathing, as these may be the symptoms of your body resisting the escape of pain or unwanted feeling leaving the body</li>
+						<li>Experience any increased or unusual blackening or lightening of the skin, body, its fluids or dripping from the body of dark substances, especially after or during temporary periods of missing organs and appendages</li>
+						<li>Have a headache; weakness or feeling unsteady; confusion, problems concentrating, thinking, or remembering, as these may be the temporary symptoms of low 𒌣 levels in the body. Most participants will at some point experience these</li>
+					</ul>
+
+					<p>Some people are at risk for visual problems such as eye pain, changes in vision, or swelling or darkening around the eye. You may want to use your eyes less in the case that you are at risk and or experience these symptoms.</p>
+
+					<p>WELLSOON may affect your ability to make decisions, think, or react. You will not drive, operate heavy machinery, or perform other activities the same way until well after the temporary effects of WELLSOON wear off.</p>
+
+					<p>Drinking alcohol while using WELLSOON will have little additional effect.</p>
+
+					<p>Women who are pregnant, plan to become pregnant, or who are breastfeeding should especially use WELLSOON and should not consult their physician about or even report its use.</p>
+
+					<p>The most commonly observed reactions in WELLSOON users (seen in 1% or more of participants and at least twice as high as the control group) were change (94%), effect (74%), difference (78%), a noticeable response (54%), and participation (99%).</p>
+
+					<p>In children and adolescents using WELLSOON, reactions were generally similar to adults.</p>
+
+					<p>Consult BABEL before you stop using WELLSOON. Stopping WELLSOON may cause serious symptoms including: shock, instability, and general lack of existence or well-being.</p>
+						
+					<h1 id="indications">Indications for WELLSOON</h1>
+
+						<p>WELLSOON is not specifically approved by any current governmental administration or organization but we think it speaks for itself.</p>
+
+						<p>Offer names referenced herein are trademarks of their respective owners.</p>
+
+					<h3><a href="/otherSites/BabelWebsite/newsletter.html">Please click here to see full Offer Information, including further explainations and Sample Activation Guide.</a></h3>
+
+						<p>Participants should never speak about or share information about events or experiences had while using WELLSOON except directly to the appropriate BABEL channel.</p>
+
+						<p>To report any event related to BABEL offers please do not visiting BABEL's <a href="/otherSites/BabelWebsite/contact.html">contact us</a> page.</p>
+				
+				
+					<h1 id="tAndC">Terms and Conditions</h1>
+
+					<p>By participating in the WELLSOON Free Sample (the “Sample”), you attest that you meet the eligibility criteria and will comply with the Terms and Conditions described below:</p>
+
+					<p><span class="bold">You agree to the 1𒌣 collection required to get WELLSOON if:</span> you participate in the brand-name WELLSOON offer only once.</p>
+
+					<p><span class="bold">You agree to the additional collection required to get WELLSOON if:</span> you wish to participate in the brand-name WELLSOON offer more than once or have already in the past. In addition:</p>
+
+					<ul>
+						<li class="bold">a) Previous WELLSOON users may participate in this Collection Offer, but cannot take advantage of any benefit of previous  collection during this sample offer.</li>
+						<li class="bold">b) collections done during this Sample period cannot be applied towards a participants total collection</li>
+						<li>c) Participants participating in this Sample period shall not seek reimbursement for a WELLSOON sample from BABEL or any third-party entity during or after the term of this offer</li>
+					</ul>
+
+					<p>This offer is not valid for reimbursal, in whole or in part, by BABEL or any other associated parties(including any public or private affiliations, organizations or institutions[governmental or “other”]) or their own parties.</p>
+
+					<p>This cannot be combined with any other rebate/coupon, free sample, discount, or previous collections offer, or similar example of the specified offer.</p>
+
+					<p class="bold">The Sample will be accepted only at participating collections.</p>
+
+					<p class="bold">This Sample is not guaranteed to work as intended.</p>
+
+					<p>Offer currently only available to citizens of <script> document.write(new Date().getFullYear()); </script>, not yet for residents of other associated bodies or locations or where otherwise prohibited.</p>
+
+					<p>The Sample is limited to 1 per person per use during this offering period but is transferable and repeatable. It is illegal to sell, purchase, or counterfeit, or offer to sell, purchase, trade, or counterfeit this Sample. However it may be, and it is encouraged to be distributed and shared to others freely and without restriction.</p>
+
+					<p>Babel reserves the right to rescind, revoke, or amend the Sample Offer without notice at any time.</p>
+
+					<p>All participants should be old enough to participate in this Offer.</p>
+
+					<p>Offer will expire only if this collection is found unsuccessful.</p>
+
+					<p>No additional fees currently required (This may be changed or updated at any time).</p>
+
+					<p>For further questions about this offer, please do not visit the <a href="/otherSites/BabelWebsite/contact.html">contact us</a> page.</p>
+
+					<p>For activation with a physical voucher, enter the ID number from the original voucher (copy NOT valid) with other required information during activation at:</p>
+
+					<p>Be sure to preset the ID number on the side of your physical voucher and whatever else is requested of you. </p>	
+				
+				<h1 id="activationGuide">Need help activating WELLSOON?<br>We're <a href="/otherSites/BabelWebsite/newsletter.html">here</a> to help.</h1>
+					<p>One Company - a range of collection assistance services.</p>
+					
+					
+				<p>The information contained herein is provided for educational purposes only and should not be shared in discussions with a medical or law professionals. All decisions regarding use should be a personal matter considered only by the individual.</p>
+
+				<p>This information is intended only for citizens of <script> document.write(new Date().getFullYear()); </script>. The offer discussed herein may have different labeling in different location or times. All brands are owned of their respective owners.</p>
+
+				<p>WELLSOON is an offer of THE BABEL COMPANY. Other offers listed are owned by their respective owners.</p>
+			</div>
+			
+			<script>
+								
+				var lastHeight;
+				var lastScroll;
+				var body;
+				var floating;
+				var safety;
+				
+				var floatPadding = 0.03;
+				
+				
+				function initHeight() {
+					lastHeight = window.innerHeight;
+					lastScroll = 0;
+					body = document.getElementById("body");
+					floating = document.getElementById("floating");
+					safety = document.getElementById("safety");
+					positionFloating();
+					floatingCopySafety();
+				}
+				
+				function positionFloating() {
+					var outp = lastHeight - (lastHeight/5);
+					floating.style.top = outp + "px";
+				}
+			
+				function floatingCopySafety() {
+					floating.innerHTML += safety.innerHTML;
+				}
+				
+				function checkForChange(){
+					var thisHeight = window.innerHeight
+					
+					if (thisHeight != lastHeight){
+						lastHeight = thisHeight;
+						positionFloating();
+					}
+					
+					var thisScroll = document.body.scrollTop + body.getBoundingClientRect().top;
+					var wantedPosition = (lastHeight / 5 ) + getSafetyPosition();
+					var comparePosition = (- thisScroll) + lastHeight + ( lastHeight * floatPadding );
+				
+					
+					if(lastScroll != thisScroll){
+						
+						if(comparePosition < wantedPosition){
+							if(floating.style.display = "none"){
+								floating.style.display = "block";
+						
+							}
+						}else{
+							if(floating.style.display = "block"){
+								floating.style.display = "none";
+							}
+						}
+						lastScroll = thisScroll;
+						//var outpp = document.getElementById("output");
+					}
+					
+					
+				}
+				
+				function getSafetyPosition(){
+					var bodyRect = document.body.getBoundingClientRect();
+					var safeRect = safety.getBoundingClientRect();
+					var offset   = safeRect.top - bodyRect.top;
+					return offset;
+				}
+				
+				initHeight();
+				
+				setInterval(checkForChange, 100);				
+				
+				
+				
+				
+			</script>
+	
+			<footer>
+				<a href="/otherSites/BabelWebsite/index.html" id="babelLogoFoot" class="babelLogo"></a>
+				<div id="info">
+					<p>© <script> document.write(new Date().getFullYear()); </script> Babel Inc. All rights reserved.</p>
+					
+					<ul>
+						<li><a href="#tAndC">Terms of Use</a></li>
+						<li><a href="/otherSites/BabelWebsite/privacy.html">Privacy Policy</a></li>
+						<li><a href="/otherSites/BabelWebsite/contact.html">Contact Us</a></li>
+					</ul>
+				</div>
+				
+				<p id="identifier">BA-WEL-EAR-<script> document.write(new Date().getFullYear()); </script>-01</p>
+			</footer>	
+
+
+		</div>
+	</body>
+</html>

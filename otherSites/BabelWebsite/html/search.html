@@ -1,0 +1,18 @@
+<form id="form">
+	<input type="text" name="search" id="searchInput">
+	<input type="submit" value="search" name="submit" onclick="TrySearch(); return false;">
+	<label id="error" for="submit" class="info">There are no results for the search term "<span id="searchOutput"></span>"</label>
+</form>
+
+
+
+
+<script>
+	function TrySearch(){
+		document.getElementById("searchOutput").innerHTML = document.getElementById("searchInput").value;
+		
+		var element = document.getElementById("error");
+		element.style.display = "initial";
+		document.getElementById("form").reset();
+	}
+</script>

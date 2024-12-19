@@ -1,0 +1,374 @@
+body,html{
+	overflow-x: hidden;
+}
+
+body{
+	overflow-y: hidden;
+	font-family: "FS Albert Web Light", Verdana, Sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+#container{
+	display: flex;
+	flex-direction: column;
+}
+
+#header{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/*background-color: orange;*/
+}
+
+#wellsoonLogo{
+	float: left;
+	height: 16vh;
+	width: 32vh;
+	/*background-color: blue;*/
+	background-image: url('../images/wellsoonLogo.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+}
+
+#jump{
+	margin-left: 2vh;
+	height: 16vh;
+	display: flex;
+	float: left;
+	font-size: 1.5vh;
+	line-height: 3vh;
+	/*background-color:grey;*/
+	
+}
+
+#jump ul{
+	margin: auto;
+
+}
+
+#menuRight{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 16vh;
+	display: flex;
+	background-color: white;
+}
+
+#menuRight a{
+	margin-right: 2vh;
+}
+
+.babelLogo{
+	height: 8vh;
+	width: 8vh;
+	background-image: url('../images/babelLogo.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+#babelLogoHead{
+	height: 16vh;
+}
+
+#menuWord{
+	line-height: 16vh;
+	text-transform: uppercase;
+	font-size: 2vh;
+}
+#menuIcon{
+	height: 16vh;
+	width: 5vh;
+	background-image: url('../images/lines.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80%;
+}
+
+nav {
+	position: absolute;
+	top: 16vh;
+	display: none;
+	height: 16vh;
+	font-size: 2.5vmin;
+	width:100%
+}
+
+nav ul{
+	display: flex;
+	text-align: center;
+	width:100%
+}
+
+nav a{
+	width: 25%;
+	height: 100%;
+	border-right: 1px solid black;
+	background-color: gainsboro;	
+	display: flex;
+}
+
+nav a:last-of-type{
+	border: none;
+}
+
+nav li{
+	margin: auto;
+}
+
+nav a:hover, nav a:active{
+	background-color: white;	
+}
+
+#banner{
+	/*min-height: 75vh;*/
+	width: 100vw;
+	background-image: url('../images/bloop.png');
+	background-position: -30% 50%;
+	background-repeat: no-repeat;
+	background-size: 30%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	background-color:grey;
+	color:white;
+	text-align: center;
+	font-size: 3vh;
+	line-height: 4vh;
+}
+
+#banner h1{
+	font-size: 4vh;
+	margin-bottom: 2vh;
+}
+
+#get, #signUp {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: 5vh;
+}
+
+.bannerHori{
+	height:75vh;
+	width: calc(40vw - 4vh);
+}
+
+.bannerVert{
+	width: calc(100vw - 4vh);
+	height: calc(100vw - 4vh);
+	
+}
+
+#get{
+	background-color: silver;
+	/*padding: 2vh;*/
+}
+
+#signUp{
+	background-color: whitesmoke;
+	/*padding: 2vh;*/
+	
+}
+
+#sign{
+	height: 6.5em;
+	width: 12em;
+	margin: 0 auto;
+	background-image: url('../images/babelLogoGrey.png');
+	background-repeat: no-repeat;
+	background-position: 100% 107.5%;
+	background-size: 15%;
+	/*background-color:red;*/
+	
+}
+
+#signUpImage{
+	height: 92%;
+	width: 92%;
+	/*height: 30%;
+	width: 60%;
+	margin: 0 auto;*/
+	background-image: url('../images/brick.png');
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: contain;
+	/*background-color:blue;*/
+}
+
+#getImage{
+	height: 9em;
+	width: 12em;
+	margin: 0 auto;
+	background-image: url('../images/ticket.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	/*background-color:red;*/
+}
+
+
+#signUp h1, #signUp h2,#signUp p, #signUp a{
+	color: rgb(128,128,128);
+}
+#get h1, #get h2,#get p, #get a{
+	color: rgb(105,105,105);
+}
+
+#banner h2{
+	font-size: 2vh;
+}
+
+#banner h2 a{
+	text-decoration: underline;
+}
+.symbol{
+	font-size: 2vh;
+	vertical-align:super;
+}
+
+.button{
+	border: 1px solid white;
+	padding: 1vh;
+	margin: 0 auto 1vh;
+}
+
+#getButton{
+	border-color: rgb(105,105,105);
+	background-color: rgba(105,105,105,0.1);
+}
+#getButton:hover{
+	background-color: rgba(105,105,105,0.2);
+}
+#signUpButton{
+	border-color: rgb(128,128,128);
+	background-color: rgba(128,128,128,0.1);
+}
+#signUpButton:hover{
+	background-color: rgba(128,128,128,0.25);
+}
+
+#bannerClarifications{
+	padding: 4vh;
+	font-size: 1.5vh;
+}
+
+.bold{
+	font-weight: 600;
+}
+
+#content h1, #content h2, #content h3, #floating h1, #floating h2, #floating h3  {
+	font-size: 2vh;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	font-weight: 600;
+}
+
+
+
+#content{
+	padding: 8vh 3vh 2vh;
+	background-image: url('../images/greyLine.png');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: 100% 15vmin;
+}
+
+#content p, #content ul, #content a, #floating p, #floating ul {
+	color: grey;
+	font-size: 2vh;
+	margin-bottom: 2vh;
+	/*margin: 3vh;*/
+}
+
+#content a{
+	text-decoration: underline;
+}
+
+#content ul{
+	margin-left: 2vh;
+}
+
+.dots{
+	list-style-type: disc;
+}
+
+#content li{
+	margin-bottom: 2vh;
+	font-size: 2vh;
+}
+
+
+#content h1, #floating h1, #content h1 a{
+	color: #456176;
+}
+#enclosed{
+	border: 1px solid black;
+	padding: 0 2vh;
+	margin-bottom: 2vh;
+}
+
+#plus{
+	/*background-color: green;*/
+	float: right;
+	height:2vh;
+	width: 2vh;
+	background-image: url('../images/plus.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%
+}
+
+#floating{
+	position: fixed;
+	height: 50vh;
+	/*width: 96vw;*/
+	padding: 3vh;
+	background-color: white;
+}
+
+footer{
+	padding: 0 3vh;
+	display: flex;
+	min-height: 16vh;
+	flex-wrap: wrap;
+	font-size: 2vh;
+}
+
+#babelLogoFoot{
+	height: 16vh;
+	width: 8vh;
+	margin-right: 2vh;
+
+}
+#info{
+	margin:auto;
+}
+#info p{
+	margin-bottom: 1vh;
+}
+#identifier{
+	line-height: 16vh;
+	/*background-color: pink;*/
+	white-space:nowrap;
+	align-self: flex-end;
+}
+
+footer ul{
+	display: flex;
+}
+
+footer li{
+	padding-right: 2vh;
+	margin-right: 2vh;
+	border-right: 1px solid black;
+}
+footer li:last-of-type{
+	border: none;
+}

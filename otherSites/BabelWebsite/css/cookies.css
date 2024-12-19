@@ -1,0 +1,53 @@
+#cookiePopup{
+	z-index: 9;
+	position: fixed;
+	bottom: 0;
+	
+	height:60vh;
+	width:100vw;
+	
+	display: none;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	
+	background-color: rgb(42, 40, 39);
+	font-size: 4vmin;
+	line-height: 30vmin;
+}
+
+#cookiePopup div{
+	margin: 2vmin;
+	vertical-align: middle;
+}
+
+#lockLogo{
+	background-image: url('../images/lock.png');
+	background-repeat: no-repeat;
+    background-size: 50%;
+	background-position: 50%;
+	
+	width: 15vmin;
+	height: 15vmin;
+	background-color: red;
+}
+
+#cookieMessage{
+	color: white;
+	width: 60vw;
+	padding: 3vw;
+
+	line-height: 4.5vh;
+	text-align: left;
+}
+#acceptButton {
+	height: 13vmin;
+	line-height: 13vmin;
+	text-align: center;
+	border-radius: 2.5vmin;
+	width: 28vmin;
+	background-color: springgreen;
+	text-transform: none;
+	letter-spacing: 0;
+	font-size: 5vmin;
+}
