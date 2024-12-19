@@ -392,3 +392,10 @@ padding:10px;
 #clear{
 clear:both;
 }
+
+.showcase{
+    float:left;
+    object-fit: cover;
+    width:500px;
+    height:250px;
+}
