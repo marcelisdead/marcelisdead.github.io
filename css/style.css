@@ -400,6 +400,13 @@ clear:both;
     height:250px;
 }
 
+.bigShow{
+    float:left;
+    object-fit: cover;
+    width:800px;
+    height:400px;
+}
+
 .talkbubble{
     border-radius: 15px;
     color: white;
