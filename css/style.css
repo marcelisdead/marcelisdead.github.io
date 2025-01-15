@@ -264,20 +264,21 @@ height:848px;
 }
 
 h1.tablet{
-font-size:130%;
+font-size:120%;
 font-weight:100;
-color:rgba(0,0,0,0.8);
+color:white;
 letter-spacing:2px;
 width:220px;
 height:63px;
 text-align:center;
-background-image:url('../images/title.png');
+/*background-image:url('../images/title.png');*/
+background-color:black;
 text-transform:uppercase;
 font-family:Helvetica;
 line-height:63px;
 padding:0 40px;
 margin:100px auto 15px;
-text-shadow:0px 0px 1px dimgrey, 0px 0px 2px dimgrey, 0px 0px 3px dimgrey, 0px 0px 3px dimgrey, 1px 1px silver;
+/*text-shadow:0px 0px 1px dimgrey, 0px 0px 2px dimgrey, 0px 0px 3px dimgrey, 0px 0px 3px dimgrey, 1px 1px silver;*/
 }
 
 h1.invisible{
