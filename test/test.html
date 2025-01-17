@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <!--<div class="menu-bar">
+    
+    <h1>Art Gallery</h1>
+  </div>-->
+  
+
+  <div class="container">
+    <div class="image-list" id="imageList">
+      <!-- Images dynamically added via JS -->
+    </div>    
+
+    <div class="selected-piece">
+      
+
+      <div class="selected-window">
+        <img id="selectedImage" src="" alt="Selected Art" />
+      </div>
+
+      <div class="selected-navigation">
+        <button id="prevBtn"><p>&#x276E;</p></button>
+        <h2 id="title">Title</h2>
+        <button id="nextBtn"><p>&#x276F;</p></button>
+      </div>
+
+      <div class="description" id="description">
+        <p id="text">Description of the selected artwork will appear here.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Store JSON file path in a script tag -->
+  <script id="jsonPath" type="application/json">
+    { "file": "art_data.json" }
+  </script>
+
+  <script src="script.js"></script>
+
+  <script src="/js/main.js" defer></script>
+
+</body>
+</html>

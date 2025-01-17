@@ -1,0 +1,242 @@
+/**** RESET ****/
+h1, h2, h3, p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: medium;
+  line-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background: #369;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+a:active {
+  background: black;
+  color: white;
+}
+
+/* Style for active links */
+a.active, a.active:hover {
+  background: black;
+  color: white;
+}
+
+body {
+  margin: 0;
+  background-color: gainsboro;
+  color: #000000;
+  font-family: "Courier New", Courier, monospace;
+}
+
+
+/**** NAVIGATION ****/
+
+/* Navigation bar */
+#nav {
+  display: flex;
+  justify-content: center;  /* Centers the items */
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Main navigation list */
+#nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+
+/* Individual navigation items */
+#nav ul li {
+  position: relative;
+}
+
+/* Links in main nav */
+#nav ul li a {
+  display: block;
+  padding: 10px 10px;
+  border-bottom: 2px solid black;
+}
+
+/* Dropdown menu */
+#nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%; /* Makes it appear directly below parent */
+  left: 0;
+  background: black;
+  width: 200px;
+  flex-direction: column;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#nav ul ul li {
+  width: 100%;
+
+}
+
+/* Dropdown links */
+#nav ul ul li a {
+  color: gainsboro;
+  border-bottom: 1px solid dimgrey;
+  padding: 5px;
+  display: block;
+  
+}
+
+/* Show dropdown on hover */
+#nav ul li:hover > ul {
+  display: flex; /* Allows it to expand naturally */
+}
+
+
+/**** PORTFOLIO ****/
+
+.container {
+  display: flex;
+  flex-direction: row;/*horizontal by default*/
+  height: calc(100vh - 50px);
+}
+
+
+/**** LIST ****/
+
+.image-list {
+  flex: 1;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  padding: 0 10px;
+  /*height: calc(100%-40px);*/
+}
+
+.image-list img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.image-list img:hover {
+   transform: scale(1.1);
+   outline: 2px solid rgb(103, 135, 168);
+}
+
+/**** SELECTION ****/
+
+.selected-piece {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gainsboro;
+}
+
+.selected-window {
+  height: 60%;
+}
+
+.selected-window img {
+  width: 100%;
+  height: 100%;
+}
+
+.selected-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 10px 0px;
+  color: white;
+  font-size: 18px;
+}
+
+.selected-navigation button {
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 0 10px;
+  flex: 0 0 auto; /* Prevents buttons from growing */
+}
+.selected-navigation h2 {
+  background-color: #000000;
+  color: white;
+  height: 100%;
+  margin: 0;
+  flex-grow: 1;
+  min-width: 0;
+  
+}
+.selected-navigation p {
+  font-size: 18px;
+  color: white;
+
+}
+
+
+
+/*
+#prevBtn {
+  left: 10px;
+}
+#nextBtn{
+  right: 10px;
+}*/
+
+.selected-navigation button:hover {
+  background-color: #369;
+}
+
+/**** DESCRIPTION ****/
+
+.description {
+  text-align: center;
+  width: 100%;
+  height: 40%;
+  background-color: #000000;
+  color: white;
+}
+
+
+
+.description p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Responsive Layout: Switch to column when screen is vertical (portrait mode) */
+@media screen and (max-aspect-ratio: 1/1) {
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+    /*eight: calc(100vh - 50px);*/
+  }
+
+  .image-list {
+    order: 2; /* Move image list below selected piece */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust grid for smaller screens */
+    min-height: 33.3%;
+  }
+
+  .selected-piece {
+    order: 1; /* Keep the selected piece at the top */
+    min-height: 66.6%;
+  }
+}
+
+
+
+

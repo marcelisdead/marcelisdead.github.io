@@ -1,0 +1,31 @@
+{
+  "pieces": [
+    { "image": "01.jpg", "title": "Artwork 1", "description": "Description of Artwork 1." },
+    { "image": "02.jpg", "title": "Artwork 2", "description": "Description of Artwork 2." },
+    { "image": "03.jpg", "title": "Artwork 3", "description": "Description of Artwork 3." },
+    { "image": "01.jpg", "title": "Artwork 1", "description": "Description of Artwork 1." },
+    { "image": "02.jpg", "title": "Artwork 2", "description": "Description of Artwork 2." },
+    { "image": "03.jpg", "title": "Artwork 3", "description": "Description of Artwork 3." },
+    { "image": "01.jpg", "title": "Artwork 1", "description": "Description of Artwork 1." },
+    { "image": "02.jpg", "title": "Artwork 2", "description": "Description of Artwork 2." },
+    { "image": "03.jpg", "title": "Artwork 3", "description": "Description of Artwork 3." },
+    { "image": "01.jpg", "title": "Artwork 1", "description": "Description of Artwork 1." },
+    { "image": "02.jpg", "title": "Artwork 2", "description": "Description of Artwork 2." },
+    { "image": "03.jpg", "title": "Artwork 3", "description": "Description of Artwork 3." },
+    { "image": "01.jpg", "title": "Artwork 1", "description": "Description of Artwork 1." },
+    { "image": "02.jpg", "title": "Artwork 2", "description": "Description of Artwork 2." },
+    { "image": "03.jpg", "title": "Artwork 3", "description": "Description of Artwork 3." },
+    { "image": "01.jpg", "title": "Artwork 1", "description": "Description of Artwork 1." },
+    { "image": "02.jpg", "title": "Artwork 2", "description": "Description of Artwork 2." },
+    { "image": "03.jpg", "title": "Artwork 3", "description": "Description of Artwork 3." },
+    { "image": "01.jpg", "title": "Artwork 1", "description": "Description of Artwork 1." },
+    { "image": "02.jpg", "title": "Artwork 2", "description": "Description of Artwork 2." },
+    { "image": "03.jpg", "title": "Artwork 3", "description": "Description of Artwork 3." },
+    { "image": "01.jpg", "title": "Artwork 1", "description": "Description of Artwork 1." },
+    { "image": "02.jpg", "title": "Artwork 2", "description": "Description of Artwork 2." },
+    { "image": "03.jpg", "title": "Artwork 3", "description": "Description of Artwork 3." },
+    { "image": "01.jpg", "title": "Artwork 1", "description": "Description of Artwork 1." },
+    { "image": "02.jpg", "title": "Artwork 2", "description": "Description of Artwork 2." },
+    { "image": "03.jpg", "title": "Artwork 3", "description": "Description of Artwork 3." }
+  ]
+}
