@@ -1,43 +1,60 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-	<head>
-		<link rel="stylesheet" href="css/style.css" media="all" />
-		<meta name="description" content="Marcel Bornstein is a NYC artist and XR game developer. " />
-		<meta name="keywords" content="art, new york artist, XR, VR, AR, Game Developer" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>i am marcel dot com</title>
-		<link rel="icon" type="image/png" href="images/face.png" />
-		<link rel="image_src" type="image/png" href="images/facem.png" />
-	</head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery</title>
+  <link rel="stylesheet" href="/css/portfolio.css">
+</head>
+<body>
 
-	<body>
-		<div id="wrapper">
-			<div id="header"></div>
-			<div id="clear"></div>
-			<div id="function">	
-				<div>
-					<div class="talkbubble">
-						<p>hello</p>
-						<p>i am marcel</p>
-						<p>i made <br> this stuff</p>
-					</div>
+  <div id="header"></div>
 
-					<img class="showcase" src="/images/Main/Marcel.jpg" />
-				</div>
+  <!--<div class="menu-bar">
+    
+    <h1>Art Gallery</h1>
+  </div>-->
+  
 
-				<div><img class="showcase" src="/images/xr/client/FutureUIGif.gif" /></div>
-				<div><img class="showcase" src="/images/xr/hacks/LoopJam.gif" /></div>
+  <div class="container">
+    <div class="image-list" id="imageList">
+      <!-- Images dynamically added via JS -->
+    </div>    
 
+    <div class="selected-piece">
+      
 
-				
-				<div id="clear"></div>
-			</div>
-			
-			<div id="clear"></div>
-			<div id="footer"></div>
+      <div class="selected-window">
+        <div class="zoom-controls">
+          <button id="zoomInBtn">+</button>
+          <button id="zoomOutBtn">-</button>
+        </div>
 
-		</div>
-		
-		<script src="js/main.js" defer></script>
-	</body>
+        <img id="selectedImage" src="" alt="Selected Art" />
+      </div>
+
+      <div class="selected-navigation">
+        <button id="prevBtn"><p>&#x276E;</p></button>
+        <h2 id="title">Title</h2>
+        <button id="nextBtn"><p>&#x276F;</p></button>
+      </div>
+
+      <div class="description" id="description">
+        <p id="text">Description of the selected artwork will appear here.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Store JSON file path in a script tag -->
+   <!--{ "file": "art_data.json" }-->
+  <script id="jsonPath" type="application/json">
+    { "file": "/json/home2025.json" }
+  </script>
+
+  <script src="/js/portfolio.js"></script>
+  <script src="/js/main.js"></script>
+
+</body>
 </html>

@@ -1,10 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
 
+@font-face {
+    font-family: "IBMCourier";
+    src: url(/fonts/IBMCourier.otf) format("opentype");
+  }
+
 body{
 padding:0;
 margin:0;
-font-family:courier new;
+font-family: "IBMCourier", "Courier New", Courier, monospace;
+letter-spacing: 1px;
 font-weight:normal;
 height:100%;
 width:100%;
@@ -115,7 +121,7 @@ color:white;
 
 #nav ul ul{
 display:none;
-width:200px;
+width:250px;
 background:black;
 position:absolute;
 right:auto;
@@ -285,6 +291,8 @@ h1.invisible{
 text-indent:-9999px;
 }
 
+
+/*
 #bio, #contact{
 background-repeat:no-repeat;
 background-position:0 0;
@@ -303,6 +311,7 @@ width:260px;
 height:245px;
 padding:190px 40px 0;
 }
+
 
 #dropinfo{
 height:85px;
@@ -327,22 +336,7 @@ float:left;
 border-bottom:30px solid black;
 margin:0 0 -30px;
 }
-
-#shows{
-border-top:30px solid black;
-padding:50px 0 0 0;
-text-align: left;
-}
-
-#shows dt{
-float:left;
-width:20%;
-}
-
-#shows dd{
-float:left;
-width:80%;
-}
+*/
 
 div.nothing{
 height:396px;
@@ -358,25 +352,6 @@ border:2px solid black;
 
 #drawno h1.tablet{
 line-height:31px;
-}
-
-a.friend{
-vertical-align:top;
-display:inline-block;
-width:124px;
-height:200px;
-margin:10px;
-border-bottom:2px solid black;
-}
-
-a.friend a{}
-
-a.friend img{
-border:2px solid black;
-height:80px;
-width:120px;
-overflow:hidden;
-margin-bottom:20px;
 }
 
 #footer{
@@ -419,4 +394,68 @@ clear:both;
     z-index: 10;
     left: 290px;
     top: 200px;
+}
+
+#about-page{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align items vertically */
+    text-align: center;
+}
+
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between img and text */
+}
+
+#contact-text{
+    padding: 40px 0;
+    max-width: 400px;
+}
+
+#contact-text p{
+    text-align: center;
+    padding: 10px 0 0;
+}
+
+#about-img{
+   /* object-fit: cover;*/
+    height:400px;
+}
+
+#bio{
+    color: white;
+    background: black;
+    padding:72px 72px;
+}
+
+#bio p{
+    color: white;
+    background: black;
+    line-height:1.7;
+    padding:0 0 20px;
+    
+}
+a.friend{
+vertical-align:top;
+display:inline-block;
+width:124px;
+height:200px;
+margin:10px;
+border-bottom:2px solid black;
+}
+
+a.friend a{}
+
+a.friend img{
+border:2px solid black;
+height:80px;
+width:120px;
+overflow:hidden;
+margin-bottom:20px;
 }

@@ -27,7 +27,6 @@ a.active, a.active:hover {
   color: white;
 }
 
-
 @font-face {
   font-family: "IBMCourier";
   src: url(/fonts/IBMCourier.otf) format("opentype");
@@ -38,6 +37,7 @@ body {
   background-color: gainsboro;
   color: #000000;
   font-family: "IBMCourier", "Courier New", Courier, monospace;
+  letter-spacing: 1px;
 }
 
 
@@ -81,7 +81,7 @@ body {
   top: 100%; /* Makes it appear directly below parent */
   left: 0;
   background: black;
-  width: 200px;
+  width: 250px;
   flex-direction: column;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -240,17 +240,28 @@ body {
 }
 
 /**** DESCRIPTION ****/
+
 .description {
   text-align: center;
   width: 100%;
   height: 40%;
   background-color: #000000;
   color: white;
+  overflow: auto;
+  padding-top: 20px;
+  justify-content: center; 
 }
 
 .description p {
   font-size: 16px;
   line-height: 1.5;
+  margin: 15px;
+}
+
+.description a {
+  color: white;
+  font-weight:bold;
+  text-decoration: underline;
 }
 
 /* Responsive Layout: Switch to column when screen is vertical (portrait mode) */
@@ -304,6 +315,3 @@ body {
 #zoomInBtn:hover, #zoomOutBtn:hover {
   background-color: #369;
 }
-
-
-
