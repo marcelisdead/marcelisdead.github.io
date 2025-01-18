@@ -46,7 +46,7 @@ function populateImageList() {
 }
 
 let isPanning = false, startX = 0, startY = 0, currentX = 0, currentY = 0;
-let scale = 1, maxScale = 3, minScale = 1;
+let scale = 1, maxScale = 5, minScale = 1;
 let imgOffsetX = 0, imgOffsetY = 0;
 
 selectedImage.addEventListener("mousedown", startPan);
@@ -252,10 +252,11 @@ function adjustImageListLayout() {
 
 }
 
+/*
 window.addEventListener("resize", () => {
   adjustImageListLayout(); // Readjust image grid
   panImage(); // Fix image positioning
-});
+});*/
 
 
 // Set Zoom Levels
@@ -305,3 +306,24 @@ function getPinchDistance(touches) {
   return Math.sqrt(dx * dx + dy * dy);
 }
   */
+
+
+function handleViewportResize() {
+  const container = document.querySelector(".container");
+  const selectedWindow = document.querySelector(".selected-window");
+
+  // Get dynamic viewport height (fixes mobile resizing)
+  let newHeight = window.innerHeight - 40; // Adjust for nav height
+  container.style.height = `${newHeight}px`;
+  selectedWindow.style.height = `${newHeight * 0.6}px`;
+
+  // Force reapply image layout and pan position
+  adjustImageListLayout();
+  panImage();
+}
+
+// Trigger recalculation when the viewport changes (e.g., address bar hides)
+window.addEventListener("resize", handleViewportResize);
+
+// Run once on page load
+handleViewportResize();
