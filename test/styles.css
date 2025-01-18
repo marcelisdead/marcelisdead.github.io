@@ -27,11 +27,17 @@ a.active, a.active:hover {
   color: white;
 }
 
+
+@font-face {
+  font-family: "IBMCourier";
+  src: url(/fonts/IBMCourier.otf) format("opentype");
+}
+
 body {
   margin: 0;
   background-color: gainsboro;
   color: #000000;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "IBMCourier", "Courier New", Courier, monospace;
 }
 
 
