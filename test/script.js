@@ -102,15 +102,6 @@ function stopPan() {
 selectedImage.addEventListener("wheel", zoomImage);
 selectedImage.addEventListener("gesturechange", zoomImage);
 
-function resetButtonState(event) {
-  event.target.blur(); // Remove focus (prevents staying active)
-}
-
-zoomInBtn.addEventListener("touchend", resetButtonState);
-zoomOutBtn.addEventListener("touchend", resetButtonState);
-zoomInBtn.addEventListener("mouseup", resetButtonState);
-zoomOutBtn.addEventListener("mouseup", resetButtonState);
-
 function zoomImage(event) {
   event.preventDefault();
 
@@ -261,7 +252,10 @@ function adjustImageListLayout() {
 
 }
 
-window.addEventListener("resize", adjustImageListLayout);
+window.addEventListener("resize", () => {
+  adjustImageListLayout(); // Readjust image grid
+  panImage(); // Fix image positioning
+});
 
 
 // Set Zoom Levels
@@ -275,6 +269,8 @@ zoomOutBtn.addEventListener("click", () => {
   zoomImage({ deltaY: 100, preventDefault: () => {} });
 });
 
+
+/*
 let lastTouchDistance = null; // Track pinch distance
 
 selectedWindow.addEventListener("touchstart", (event) => {
@@ -308,3 +304,4 @@ function getPinchDistance(touches) {
   let dy = touches[0].clientY - touches[1].clientY;
   return Math.sqrt(dx * dx + dy * dy);
 }
+  */
