@@ -1,0 +1,8 @@
+{
+  "pieces": [
+    { "image": "/images/Main/MarcelSquare.jpg", "title": "hello", "description": "<p>i am marcel</p><p>i made <br> this stuff</p>" },
+    { "image": "/images/xr/client/FutureUIGif.gif", "title": "FutureUI", "description": "Description of FutureUI" },
+    { "image": "/images/xr/hacks/LoopJam.gif", "title": "LoopJam", "description": "<a>Description</a> of LoopJam." },
+    { "image": "/images/xr/games/ServerUpdate.gif", "title": "ServerUpdate", "description": "<b>Description</b> of ServerUpdate." }
+  ]
+}

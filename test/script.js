@@ -202,7 +202,7 @@ function startAutoCycle() {
     autoCycleInterval = setInterval(() => {
       currentIndex = (currentIndex + 1) % data.pieces.length;
       selectPiece(currentIndex);
-    }, 3000); // Change every 4 seconds
+    }, 4000); // Change every 4 seconds
   }
 }
 
