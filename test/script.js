@@ -102,6 +102,15 @@ function stopPan() {
 selectedImage.addEventListener("wheel", zoomImage);
 selectedImage.addEventListener("gesturechange", zoomImage);
 
+function resetButtonState(event) {
+  event.target.blur(); // Remove focus (prevents staying active)
+}
+
+zoomInBtn.addEventListener("touchend", resetButtonState);
+zoomOutBtn.addEventListener("touchend", resetButtonState);
+zoomInBtn.addEventListener("mouseup", resetButtonState);
+zoomOutBtn.addEventListener("mouseup", resetButtonState);
+
 function zoomImage(event) {
   event.preventDefault();
 
@@ -265,3 +274,37 @@ zoomInBtn.addEventListener("click", () => {
 zoomOutBtn.addEventListener("click", () => {
   zoomImage({ deltaY: 100, preventDefault: () => {} });
 });
+
+let lastTouchDistance = null; // Track pinch distance
+
+selectedWindow.addEventListener("touchstart", (event) => {
+  if (event.touches.length === 2) {
+    lastTouchDistance = getPinchDistance(event.touches);
+  }
+});
+
+selectedWindow.addEventListener("touchmove", (event) => {
+  if (event.touches.length === 2) {
+    event.preventDefault(); // Prevent page zoom
+
+    let newTouchDistance = getPinchDistance(event.touches);
+    
+    if (lastTouchDistance) {
+      let scaleChange = newTouchDistance / lastTouchDistance;
+      zoomImage({ scale: scaleChange, touches: event.touches });
+    }
+
+    lastTouchDistance = newTouchDistance;
+  }
+});
+
+selectedWindow.addEventListener("touchend", () => {
+  lastTouchDistance = null; // Reset when fingers lift
+});
+
+// Helper function to get distance between two touch points
+function getPinchDistance(touches) {
+  let dx = touches[0].clientX - touches[1].clientX;
+  let dy = touches[0].clientY - touches[1].clientY;
+  return Math.sqrt(dx * dx + dy * dy);
+}
