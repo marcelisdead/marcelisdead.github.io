@@ -22,7 +22,6 @@ a:active {
   color: white;
 }
 
-/* Style for active links */
 a.active, a.active:hover {
   background: black;
   color: white;
@@ -45,6 +44,7 @@ body {
   align-items: center;
   position: relative;
   z-index: 1000;
+  height: 40px;
 }
 
 /* Main navigation list */
@@ -97,7 +97,7 @@ body {
 
 /* Show dropdown on hover */
 #nav ul li:hover > ul {
-  display: flex; /* Allows it to expand naturally */
+  display: flex;
 }
 
 
@@ -106,7 +106,7 @@ body {
 .container {
   display: flex;
   flex-direction: row;/*horizontal by default*/
-  height: calc(100vh - 50px);
+  height: calc(100vh - 40px);
 }
 
 
@@ -115,23 +115,38 @@ body {
 .image-list {
   flex: 1;
   overflow: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 10px;
-  padding: 0 10px;
-  /*height: calc(100%-40px);*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers all images as a group */
+  /*align-content: center;*/
+  align-items: flex-start;
+  padding: 5px 0 0 0;
+  height: calc(100% - 5px);
+}
+
+/* Vertical Centered Layout */
+.image-list.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-list img {
-  width: 100%;
   height: auto;
   cursor: pointer;
   transition: transform 0.3s;
+  width: 100px;  
+  margin: 5px;
 }
 
 .image-list img:hover {
-   transform: scale(1.1);
-   outline: 2px solid rgb(103, 135, 168);
+  transform: scale(1.1);
+}
+
+/* Outline for the selected image */
+.image-list img.selected {
+  outline: 5px solid rgb(103, 135, 168);
 }
 
 /**** SELECTION ****/
@@ -146,11 +161,19 @@ body {
 
 .selected-window {
   height: 60%;
+  width: calc(100% - 20px);
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
 }
 
 .selected-window img {
   width: 100%;
   height: 100%;
+  cursor: grab; /* Indicates draggable image */
+  /*transform-origin: center center;  Keeps zoom centered */
+  transition: transform 0.2s ease-out;
+  object-fit: contain;
 }
 
 .selected-navigation {
@@ -158,50 +181,53 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  margin: 10px 0px;
+  margin: 0px 0px 2px;
   color: white;
   font-size: 18px;
+  gap: 2px; 
+  height: 40px;
+  width:100%
 }
 
 .selected-navigation button {
   background-color: #000000;
   border: none;
+  margin: 0;
+  
   cursor: pointer;
   transition: background-color 0.3s;
-  padding: 0 10px;
-  flex: 0 0 auto; /* Prevents buttons from growing */
+  padding: 0;
+  flex: 0 0 30px; /* Prevents buttons from growing */
 }
+
+.selected-navigation button p {
+  color: white;
+  padding: 0;
+  margin: 0;
+  height: 40px;
+  display: flex;
+  align-items: center; /* Vertically align text */
+  justify-content: center; /* Center text horizontally */
+}
+
 .selected-navigation h2 {
   background-color: #000000;
   color: white;
   height: 100%;
-  margin: 0;
-  flex-grow: 1;
-  min-width: 0;
-  
+  flex: 1; /* Fills available space 
+
+  /*vertical align text*/
+  display: flex;
+  align-items: center; /* Vertically align text */
+  justify-content: center; /* Center text horizontally */
+  min-width: 0; /* Allows h2 to shrink if needed */
 }
-.selected-navigation p {
-  font-size: 18px;
-  color: white;
-
-}
-
-
-
-/*
-#prevBtn {
-  left: 10px;
-}
-#nextBtn{
-  right: 10px;
-}*/
 
 .selected-navigation button:hover {
   background-color: #369;
 }
 
 /**** DESCRIPTION ****/
-
 .description {
   text-align: center;
   width: 100%;
@@ -209,8 +235,6 @@ body {
   background-color: #000000;
   color: white;
 }
-
-
 
 .description p {
   font-size: 16px;
@@ -221,14 +245,13 @@ body {
 @media screen and (max-aspect-ratio: 1/1) {
   .container {
     flex-direction: column; /* Stack elements vertically */
-    /*eight: calc(100vh - 50px);*/
   }
 
   .image-list {
     order: 2; /* Move image list below selected piece */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust grid for smaller screens */
-    min-height: 33.3%;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); Adjust grid for smaller screens */
+    min-height: calc(33% - 20px);/*  subtract padding  */
   }
 
   .selected-piece {
@@ -237,6 +260,30 @@ body {
   }
 }
 
+.zoom-controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 3000;
+}
+
+#zoomInBtn, #zoomOutBtn {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+#zoomInBtn:hover, #zoomOutBtn:hover {
+  background-color: rgba(54, 105, 153, 0.9);
+}
 
 
 
