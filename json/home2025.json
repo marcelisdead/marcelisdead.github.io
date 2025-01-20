@@ -1,8 +1,8 @@
 {
   "pieces": [
-    { "image": "/images/Main/MarcelSquare.jpg", "title": "hello", "description": "<p>i am marcel</p><p>i made <br> this stuff</p>" },
-    { "image": "/images/xr/client/FutureUIGif.gif", "title": "FutureUI", "description": "<p>Equipment store and weapon selection menu</p><p>for <a href=\"\">Tech Warrior VR</a> (In Development)</p><p>( Unity )</p>" },
-    { "image": "/images/xr/hacks/LoopJam.gif", "title": "LoopJam", "description": "<p>An MR Multiplayer Music Collaboration, Creation and Performance Tool</p><p><strong>Winner!</strong> 2024 Meta Quest Presence Platform Hackathon  2nd Place In Utility & Design Experiences </p><p>( Quest 3 + Unity+ Presence Platform )</p>" },
-    { "image": "/images/xr/games/ServerUpdate.gif", "title": "ServerUpdate", "description": "<p>A VR Action/Adventure Game. (In Development)</p><p>Explore the world inside a 90’s PC with grid based movement and volleyball power.</p><p>( Quest 3 + Unity + XRIT )</p>" }
+    { "image": "/images/Main/MarcelOutside.png", "title": "hello", "description": "<p>i am <a href=\"/about.html\">marcel</a></p><p>i made <br> this stuff</p>" },
+    { "image": "/images/xr/client/FutureUIGif.gif", "title": "FutureUI", "description": "<p>Equipment store and weapon selection menu</p><p>for <a href=\"/pages/futureUI.html\">Tech Warrior VR</a> (In Development)</p><p>( Unity )</p>" },
+    { "image": "/images/xr/hacks/LoopJam.gif", "title": "LoopJam", "description": "<p>An MR multiplayer music collaboration, creation and performance tool</p><p><strong>Winner!</strong> 2024 Meta Quest Presence Platform Hackathon  2nd Place in Utility & Design Experiences.  <a href=\"/pages/hacks.html\">Learn More</a></p><p>( Quest 3 + Unity+ Presence Platform )</p>" },
+    { "image": "/images/xr/games/ServerUpdate.gif", "title": "ServerUpdate", "description": "<p>A VR action/adventure game. (in development)</p><p>Explore the world inside a 90’s PC with grid based movement and volleyball power. <a href=\"/pages/serverUpdate.html\">Learn More</a></p><p>( Quest 3 + Unity + XRIT )</p>" }
   ]
 }

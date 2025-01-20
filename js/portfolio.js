@@ -4,7 +4,7 @@ const imageList = document.getElementById("imageList");
 const selectedWindow = document.querySelector(".selected-window");
 const selectedImage = document.getElementById("selectedImage");
 const title = document.getElementById("title");
-const text = document.getElementById("text");
+const text = document.getElementById("description-text");
 
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");

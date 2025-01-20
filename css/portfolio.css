@@ -264,6 +264,17 @@ body {
   text-decoration: underline;
 }
 
+#description-text{
+  height: 100%;
+}
+
+/*
+#description-text h4 {
+  margin: auto;
+  font-size: 100%;
+  color: blue;
+}*/
+
 /* Responsive Layout: Switch to column when screen is vertical (portrait mode) */
 @media screen and (max-aspect-ratio: 1/1) {
   .container {
