@@ -441,6 +441,13 @@ clear:both;
     padding:0 0 20px;
     
 }
+
+#bio a {
+    color: white;
+    font-weight:bold;
+    text-decoration: underline;
+}
+
 a.friend{
 vertical-align:top;
 display:inline-block;
