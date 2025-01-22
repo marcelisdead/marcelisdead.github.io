@@ -281,7 +281,7 @@ body {
 
 h1.tablet{
   font-size:125%;
-  font-weight:100;
+  font-weight:bold;
   color:white;
   letter-spacing:2px;
   max-width:220px;
@@ -354,6 +354,7 @@ h1.tablet{
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s;
+  
   /*border-radius: 5px;*/
   width:36px;
   height:40px;
