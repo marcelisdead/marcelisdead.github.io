@@ -5,6 +5,7 @@ const selectedWindow = document.querySelector(".selected-window");
 const selectedImage = document.getElementById("selectedImage");
 const title = document.getElementById("title");
 const text = document.getElementById("description-text");
+const description = document.getElementById("description");
 
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
@@ -104,6 +105,9 @@ nextBtn.addEventListener("click", () => stopAutoCycle((currentIndex + 1) % data.
 
 zoomInBtn.addEventListener("click", () => stopAutoCycle());
 zoomOutBtn.addEventListener("click", () => stopAutoCycle());
+
+description.addEventListener("wheel", () => stopAutoCycle());
+description.addEventListener("gesturechange", () => stopAutoCycle());
 
 selectedImage.addEventListener("wheel", () => stopAutoCycle());
 selectedImage.addEventListener("gesturechange", () => stopAutoCycle()); // For touch pinch zoom
