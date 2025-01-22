@@ -128,7 +128,9 @@ body {
   /*align-content: center;*/
   align-items: flex-start;
   padding: 5px 0 0 0;
-  height: calc(100% - 5px);
+  height: calc(100% - 63px - 5px);
+  margin-top: 63px;
+  align-items: center;
 }
 
 /* Vertical Centered Layout */
@@ -166,6 +168,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: gainsboro;
+ 
 }
 
 .selected-window {
@@ -275,22 +278,58 @@ body {
   color: blue;
 }*/
 
+
+h1.tablet{
+  font-size:125%;
+  font-weight:100;
+  color:white;
+  letter-spacing:2px;
+  max-width:220px;
+  height:63px;
+  text-align:center;
+  /*background-image:url('../images/title.png');*/
+  background-color:black;
+  text-transform:uppercase;
+  font-family:Helvetica;
+  line-height:63px;
+  padding:0 40px;
+  /*margin:100px auto 15px;*/
+  /*text-shadow:0px 0px 1px dimgrey, 0px 0px 2px dimgrey, 0px 0px 3px dimgrey, 0px 0px 3px dimgrey, 1px 1px silver;*/
+  margin:0 auto;
+  }
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 63px;
+    /*background-color: red;*/
+    z-index: 10; /* Ensure it's above other elements */
+    width: calc((100% / 3) - 2px);
+    margin-top: 50px;
+  }
+
 /* Responsive Layout: Switch to column when screen is vertical (portrait mode) */
 @media screen and (max-aspect-ratio: 1/1) {
   .container {
     flex-direction: column; /* Stack elements vertically */
+  }
+  .title{
+    width: 100%;
   }
 
   .image-list {
     order: 2; /* Move image list below selected piece */
     /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); Adjust grid for smaller screens */
-    min-height: calc(33% - 20px);/*  subtract padding  */
+    min-height: calc(33% - 20px - 63px-5px);/*  subtract padding  */
+    margin-top: 0; /* Push image list down by title + selected piece */
   }
 
   .selected-piece {
     order: 1; /* Keep the selected piece at the top */
     min-height: 66.6%;
+    margin-top: 73px;
   }
 }
 
@@ -326,3 +365,5 @@ body {
 #zoomInBtn:hover, #zoomOutBtn:hover {
   background-color: #369;
 }
+
+
