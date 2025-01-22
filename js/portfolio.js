@@ -3,7 +3,7 @@
 const imageList = document.getElementById("imageList");
 const selectedWindow = document.querySelector(".selected-window");
 const selectedImage = document.getElementById("selectedImage");
-const title = document.getElementById("title");
+const title = document.getElementById("selected-title");
 const text = document.getElementById("description-text");
 const description = document.getElementById("description");
 
