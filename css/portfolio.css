@@ -189,6 +189,14 @@ body {
   object-position: center bottom;
 }
 
+.selected-window iframe {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-out;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
 .selected-navigation {
   display: flex;
   align-items: center;
