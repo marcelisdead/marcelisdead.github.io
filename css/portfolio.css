@@ -182,7 +182,7 @@ body {
 .selected-window img {
   width: 100%;
   height: 100%;
-  cursor: grab; /* Indicates draggable image */
+  /*cursor: grab;  Indicates draggable image */
   /*transform-origin: center center;  Keeps zoom centered */
   transition: transform 0.2s ease-out;
   object-fit: contain;
@@ -195,6 +195,15 @@ body {
   transition: transform 0.2s ease-out;
   object-fit: contain;
   object-position: center bottom;
+}
+
+#selected-title{
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .selected-navigation {

@@ -53,11 +53,13 @@ function selectPiece(index) {
   const piece = data.pieces[index];
 
   // Update main image display
-  //selectedImage.src = piece.image;
-  title.textContent = piece.title;
+  selectedImage.src = piece.image;
+  title.innerHTML = piece.title;
+  title.href = piece.link || "#";
+//the title is an a set its href to the pieces link
   text.innerHTML = piece.description;
 
-  resetZoom(); // Reset zoom when switching images
+  //resetZoom(); // Reset zoom when switching images
 
   // Remove 'selected' class from all images
   document.querySelectorAll("#imageList img").forEach(img => img.classList.remove("selected"));
