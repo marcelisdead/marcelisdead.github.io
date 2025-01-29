@@ -283,15 +283,9 @@ text-transform:uppercase;
 font-family:Helvetica;
 line-height:63px;
 padding:0 40px;
-margin:0 auto 15px;
+margin:100px auto 15px;
 /*text-shadow:0px 0px 1px dimgrey, 0px 0px 2px dimgrey, 0px 0px 3px dimgrey, 0px 0px 3px dimgrey, 1px 1px silver;*/
 }
-
-#antifunction-title{
- margin-top: 100px;   
-}
-
-
 
 h1.invisible{
 text-indent:-9999px;
@@ -472,7 +466,3 @@ width:120px;
 overflow:hidden;
 margin-bottom:20px;
 }
-
-.underline-quick a:link{
-    text-decoration: underline;
-} 
