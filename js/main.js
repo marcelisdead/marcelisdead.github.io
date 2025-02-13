@@ -10,6 +10,24 @@ async function loadHTML(elementId, file) {
     }
 }
 
+// Function to inject a CSS file into the <head> at the top (default) or bottom
+function loadCSS(href, insertAtTop = true) {
+    if (!document.querySelector(`link[href="${href}"]`)) { // Prevent duplicate loading
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+
+        if (insertAtTop) {
+            document.head.prepend(link); // Add at the beginning
+        } else {
+            document.head.appendChild(link); // Add at the end
+        }
+    }
+}
+
+
+loadCSS('/css/main.css', true);
+
 // Load header and footer
 loadHTML('header', '/includes/header.html');
 loadHTML('footer', '/includes/footer.html');

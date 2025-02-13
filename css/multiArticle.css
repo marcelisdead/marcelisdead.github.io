@@ -1,0 +1,135 @@
+.title{
+  margin:-100px 100 0;
+  padding:10px 0 10px;
+  width:100%;
+  }
+
+  /*
+  .title a{
+  padding:5px;
+  border-bottom:1px solid black;
+  }
+  */
+
+.title h1{
+  font-size:125%;
+  font-weight:normal;
+  color:white;
+  letter-spacing:2px;
+  
+  height:63px;
+  text-align:center;
+  /*background-image:url('../images/title.png');*/
+  background-color:black;
+  text-transform:uppercase;
+  font-family:Helvetica;
+  line-height:63px;
+  padding:0 40px;
+  margin:0 auto;
+  }
+
+#wrapper{
+  position:relative;
+  
+  width:90%;
+  margin:0 auto;
+  display:block;
+  max-width:825px;
+  }
+
+.article{
+  /*border: 1px solid dimgrey;
+  padding: 0 0 10px; */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Aligns the image and text at the top */
+  flex-wrap: wrap; /* Allows stacking when the screen is small */
+  padding: 0 0 10px;
+  gap: 10px; /* Adds space between image and text */
+  
+}
+
+.article h1{
+  background-color:black;
+  color:white;
+  padding:5px;
+  text-align:left;
+  /*margin-bottom: 10px;*/
+  width: 100%;
+}
+
+.article h3{
+  margin: 15px 40px 30px;/*0 0 10px;*/
+  padding: 10px 10px 10px;
+  background-color: black;
+  color: white;
+}
+
+.article p{
+  margin: 0 5px 10px;
+}
+
+.link-list {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;  /* Centers the items */
+  align-items: center;
+  position: relative;
+  height: 40px;
+}
+
+/* Main navigation list */
+.article ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+
+.article ul li a {
+  display: block;
+  padding: 10px 10px;
+  border-bottom: 2px solid black;
+  
+}
+
+.article img{
+  height:200px;
+  width:200px;
+  object-fit: contain;
+  background-color: black;
+  border: 2px solid black;
+}
+
+.article:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.article-text {
+  flex: 1;
+  min-width: 250px;
+  min-height: 200px;
+  padding-top: 10px;/*bring it down a bit*/
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .article {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .article img {
+    /*margin-bottom: 10px;*/
+    width:100%;
+  }
+
+  .link-list {
+    margin-top: 0;
+  }
+}

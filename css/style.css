@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-
+/*
 @font-face {
     font-family: "IBMCourier";
     src: url(/fonts/IBMCourier.otf) format("opentype");
@@ -53,10 +53,11 @@ a:active{
 background:black;	
 color:white;
 }
+*/
 
 #wrapper{
 position:relative;
-vertical-align:middle;
+
 width:90%;
 margin:0 auto;
 display:block;
@@ -84,6 +85,7 @@ display:none;
 display:block;
 }
 
+/*
 #nav {
 float:left;
 width:100%;
@@ -155,7 +157,7 @@ border-bottom:2px solid black;
 #search{
 border-bottom:2px solid black;
 }
-
+*/
 #q{
 font-size:medium;
 width:100px; 
@@ -283,7 +285,7 @@ text-transform:uppercase;
 font-family:Helvetica;
 line-height:63px;
 padding:0 40px;
-margin:0 auto 15px;
+margin:15px auto 15px;
 /*text-shadow:0px 0px 1px dimgrey, 0px 0px 2px dimgrey, 0px 0px 3px dimgrey, 0px 0px 3px dimgrey, 1px 1px silver;*/
 }
 
@@ -360,16 +362,6 @@ border:2px solid black;
 line-height:31px;
 }
 
-#footer{
-width:100%;
-margin:100px 0 0;
-padding:20px 0 10px;
-border-top:2px solid black;
-}
-
-#footer a{
-padding:10px;
-}
 
 #clear{
 clear:both;

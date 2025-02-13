@@ -1,0 +1,127 @@
+/**** RESET ****/
+h1, h2, h3, p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: medium;
+  line-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background: #369;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+a:active {
+  background: black;
+  color: white;
+}
+
+a.active, a.active:hover {
+  background: black;
+  color: white;
+}
+
+@font-face {
+  font-family: "IBMCourier";
+  src: url(/fonts/IBMCourier.otf) format("opentype");
+}
+
+body {
+  margin: 0;
+  background-color: gainsboro;
+  color: #000000;
+  font-family: "IBMCourier", "Courier New", Courier, monospace;
+  letter-spacing: 1px;
+  height:100%;
+  width:100%;
+  text-align:center;
+}
+
+*{
+  padding:0;
+  margin:0;
+  outline:0;
+  }
+
+/**** NAVIGATION ****/
+
+/* Navigation bar */
+#nav {
+  display: flex;
+  justify-content: center;  /* Centers the items */
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+  height: 40px;
+}
+
+/* Main navigation list */
+#nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+
+/* Individual navigation items */
+#nav ul li {
+  position: relative;
+}
+
+/* Links in main nav */
+#nav ul li a {
+  display: block;
+  padding: 10px 10px;
+  border-bottom: 2px solid black;
+}
+
+/* Dropdown menu */
+#nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%; /* Makes it appear directly below parent */
+  left: 0;
+  background: black;
+  width: 250px;
+  flex-direction: column;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#nav ul ul li {
+  width: 100%;
+
+}
+
+/* Dropdown links */
+#nav ul ul li a {
+  color: gainsboro;
+  border-bottom: 1px solid dimgrey;
+  padding: 5px;
+  display: block;
+  
+}
+
+/* Show dropdown on hover */
+#nav ul li:hover > ul {
+  display: flex;
+}
+
+#footer{
+  width:100%;
+  margin:100px 0 0;
+  padding:20px 0 20px;
+  border-top:2px solid black;
+  }
+  
+  #footer a{
+  padding:10px;
+  }
+  
