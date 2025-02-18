@@ -59,6 +59,7 @@ body {
   position: relative;
   z-index: 1000;
   height: 40px;
+  /*border-bottom: 2px solid black;*/
 }
 
 /* Main navigation list */
@@ -79,7 +80,7 @@ body {
 #nav ul li a {
   display: block;
   padding: 10px 10px;
-  border-bottom: 2px solid black;
+
 }
 
 /* Dropdown menu */
