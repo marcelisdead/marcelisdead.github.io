@@ -15,16 +15,15 @@
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centers all images as a group */
-  /*align-content: center;*/
+  justify-content: center;
   align-items: flex-start;
   padding: 5px 0 0 0;
-  height: calc(100% - 71px);
-  margin-top: 66px;
+  height: calc(100% - 70px);
+  margin-top: 65px;
   margin-right: 2px;
   align-items: center;
   background-color: black;
-  width: calc((100% / 3) - 2px);
+  /*width: calc((100% / 3) - 2px);*/
 }
 
 /* Vertical Centered Layout */
@@ -69,7 +68,7 @@
 .selected-window {
   height: 60%;
   width: 100%;
-  padding: 2px 0px;
+  padding: 0px 0px 2px;
   overflow: hidden;
   position: relative;
 }
@@ -219,13 +218,13 @@ h1.tablet{
 
 .title {
   position: absolute;
-  top: 0;
+  top: 40px;
   left: 0;
   height: 63px;
   /*background-color: red;*/
   z-index: 10; /* Ensure it's above other elements */
   width: calc((100% / 3) - 1px);
-  margin-top: 42px;
+  /*margin-top: 42px;*/
 }
 
 /* Responsive Layout: Switch to column when screen is vertical (portrait mode) */

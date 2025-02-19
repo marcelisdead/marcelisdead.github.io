@@ -117,10 +117,17 @@ body {
 
 #footer{
   width:100%;
-  margin:100px 0 0;
-  padding:20px 0 20px;
+  margin:20px 0 0;
+  /*margin:100px 0 0;
+  padding:20px 0 20px;*/
   border-top:2px solid black;
+  height: 40px;
   }
+
+  #footer p{
+    height: 40px;
+    line-height: 40px;
+    }
   
   #footer a{
   padding:10px;

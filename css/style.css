@@ -468,3 +468,11 @@ margin-bottom:20px;
 .underline-quick a:link{
     text-decoration: underline;
 } 
+
+#stoneBalloon
+{
+    height:200px;
+    width:250px;
+    position: absolute;
+    bottom: 0;
+}

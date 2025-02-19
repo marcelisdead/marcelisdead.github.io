@@ -1,6 +1,6 @@
 .title{
-  margin:-100px 100 0;
-  padding:10px 0 10px;
+  /*margin:-100px 100 0;*/
+  padding:0 0 2px;
   width:100%;
   }
 
@@ -45,8 +45,8 @@
   flex-direction: row;
   align-items: flex-start; /* Aligns the image and text at the top */
   flex-wrap: wrap; /* Allows stacking when the screen is small */
-  padding: 0 0 10px;
-  gap: 10px; /* Adds space between image and text */
+  padding: 0 0 5px;
+  gap: 2px; /* Adds space between image and text */
   
 }
 
@@ -92,7 +92,7 @@
 .article ul li a {
   display: block;
   padding: 10px 10px;
-  border-bottom: 2px solid black;
+  /*border-bottom: 2px solid black;*/
   
 }
 
@@ -104,6 +104,17 @@
   border: 2px solid black;
 }
 
+.article iframe{
+  height:200px;
+  width:200px;
+  object-fit: contain;
+  border: 2px solid black;
+}
+
+.article .half{
+  width:50%;
+}
+
 .article:after {
   content: "";
   display: table;
@@ -113,7 +124,7 @@
 .article-text {
   flex: 1;
   min-width: 250px;
-  min-height: 200px;
+  min-height: 194px;
   padding-top: 10px;/*bring it down a bit*/
   display: flex;
   flex-direction: column;
@@ -123,14 +134,38 @@
   .article {
     flex-direction: column; /* Stack items vertically on smaller screens */
     align-items: center;
+    width: 100%;
   }
 
   .article img {
-    /*margin-bottom: 10px;*/
-    width:100%;
+    /*margin-bottom: 10px;
+    margin-left: 0;*/
+    width:calc(100% - 4px);
   }
 
-  .link-list {
-    margin-top: 0;
+  .article iframe{
+    width:calc(100% - 4px);
   }
+
+  .article .half{
+    width:calc(100% - 4px);
+  }
+
+  .article h1{
+    padding:5px 5px;
+    width:calc(100% - 10px);
+  }
+
+  .article-text{
+    min-height: auto;
+    height: auto;
+  }
+  .link-list {
+    /*margin-top: 0;*/
+  }
+
+  #wrapper{    
+    width:100%;
+    }
+  
 }
