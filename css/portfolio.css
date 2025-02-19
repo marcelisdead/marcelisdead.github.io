@@ -165,37 +165,34 @@
 .description {
   text-align: center;
   width: 100%;
-  height: Calc(40% - 60px);
+  height: Calc(40% - 30px);
   background-color: #000000;
   color: white;
   overflow: auto;
-  padding-top: 20px;
+  display: flex; /* Makes child elements expand */
   justify-content: center; 
 }
 
 .description p {
   font-size: 16px;
   line-height: 1.5;
-  margin: 15px;
+  margin: 0 15px;
 }
 
 .description a {
   color: white;
-  font-weight:bold;
-  text-decoration: underline;
 }
-/*
-#description-text{
-  height: 100%;
-}*/
 
-/*
-#description-text h4 {
-  margin: auto;
-  font-size: 100%;
-  color: blue;
-}*/
+#description-text {
+  padding-top: 20px;
+  color: white;
+  height: Calc(100%-20px);
+  width: 100%;
+}
 
+#description-text:hover {
+  background-color: #369;
+}
 
 h1.tablet{
   font-size:125%;
@@ -250,10 +247,7 @@ h1.tablet{
     min-height: 66.6%;
     margin-top: 65px;
   }
-
-  .description {
-    height: Calc(40% - 36px);
-  }
+    
 }
 
 .zoom-controls {

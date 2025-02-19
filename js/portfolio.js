@@ -58,6 +58,7 @@ function selectPiece(index) {
   title.href = piece.link || "#";
 //the title is an a set its href to the pieces link
   text.innerHTML = piece.description;
+  text.href = piece.link || "#";
 
   //resetZoom(); // Reset zoom when switching images
 
