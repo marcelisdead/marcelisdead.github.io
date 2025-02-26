@@ -23,6 +23,7 @@ fetch(jsonFilePath)
   .then(jsonData => {
     data = jsonData;
     populateImageList();
+    preloadImages();
     selectPiece(0);
     startAutoCycle(); // Start cycling by default
   })
@@ -41,6 +42,16 @@ function populateImageList() {
 
   adjustImageListLayout();
 }
+
+function preloadImages() {
+  const preloadPromises = data.pieces.map(piece => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = piece.image;
+      img.onload = resolve;  // Resolve when image is loaded
+      img.onerror = reject;  // Reject if an error occurs
+    });
+  });
 
 
 /////// SELECTION ////////////
