@@ -50,6 +50,25 @@ function populateImageList() {
   adjustImageListLayout();
 }
 
+function preloadImages() {
+  const preloadPromises = data.pieces.map(piece => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = piece.image;
+      img.onload = resolve;  // Resolve when image is loaded
+      img.onerror = reject;  // Reject if an error occurs
+    });
+  });
+// Wait for all images to load before continuing
+  Promise.all(preloadPromises)
+    .then(() => {
+      console.log('All images preloaded successfully!');
+    })
+    .catch((error) => {
+      console.error('Error preloading images:', error);
+    });
+}
+
 
 
 /////// SELECTION ////////////
