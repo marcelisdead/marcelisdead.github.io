@@ -17,12 +17,20 @@ const jsonFilePath = JSON.parse(jsonPathData).file;
 
 let data = { pieces: [] };
 
+function preloadImages(){
+  data.pieces.forEach(piece => {
+    const img = new Image();
+    img.src = piece.image;
+  })
+}
+
 // Fetch JSON Data
 fetch(jsonFilePath)
   .then(response => response.json())
   .then(jsonData => {
     data = jsonData;
     populateImageList();
+    preloadImages();
     selectPiece(0);
     startAutoCycle(); // Start cycling by default
   })
@@ -41,6 +49,7 @@ function populateImageList() {
 
   adjustImageListLayout();
 }
+
 
 
 /////// SELECTION ////////////
