@@ -333,4 +333,36 @@ border-radius: 0;
     .party__message {
         padding: 8px 20px;
     }
+
+
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .home {
+        --text-size: 12px;
+        grid-template-rows: 52% 48%;
+    }
+
+    .intro {
+        gap: 2px;
+        padding: 2px 4px;
+    }
+
+    .intro__portrait {
+        width: min(35%, 100px, 13dvh);
+    }
+
+    .drawings__frame img {
+        width: min(55%, 140px, 20dvh);
+        max-height: 20dvh;
+    }
+
+    .drawings__frame span {
+        font-size: 12px;
+        overflow-wrap: normal;
+    }
+
+    .party__cta {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
 }
