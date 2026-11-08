@@ -104,6 +104,14 @@
   border: 2px solid black;
 }
 
+.article video{
+  height:200px;
+  width:200px;
+  object-fit: contain;
+  background-color: black;
+  border: 2px solid black;
+}
+
 .article iframe{
   height:200px;
   width:200px;

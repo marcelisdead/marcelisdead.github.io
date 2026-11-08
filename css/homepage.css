@@ -1,0 +1,336 @@
+
+/* HOMEPAGE */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #000;
+}
+
+#header {
+    position: relative;
+    z-index: 20;
+    background: gainsboro;
+    min-height: 40px;
+}
+
+/* SHARED LAYOUT */
+
+.home {
+    --sidebar-width: 26%;
+    --image-width: min(70%, 220px, 22dvh);
+    --text-size: 15px;
+
+    display: grid;
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+
+    height: calc(100dvh - 40px);
+    min-height: 0;
+    overflow: hidden;
+    background: #000;
+
+    --art-width: min(70%, 220px, 22dvh);
+}
+
+/* PIZZA PARTY */
+
+.party {
+    grid-column: 2;
+    grid-row: 1 / 3;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    color: #ffb6c1;
+    text-decoration: none;
+    background: #5d0808;
+}
+
+.party:hover,
+.party:focus-visible {
+    color: #ffb6c1;
+}
+
+
+.party__art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    pointer-events: none;
+}
+
+.party__message {
+    position: relative;
+    z-index: 1;
+    width: min(90%, 570px);
+    padding: 20px;
+    /*background: rgba(180, 0, 0, 0.55);*/
+    text-align: center;
+}
+
+.party__logo {
+    margin: 0 0 10px;
+}
+
+.party__logo img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
+.party__cta {
+    display: table;
+    margin: 12px auto 0;
+    padding: 3px 10px;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: clamp(15px, 2vw, 18px);
+    color: #ffb6c1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    background: rgba(180, 0, 0, 0.20);
+    padding: 12px 19px 14px;
+    border: 1px solid #7c1f2d;
+border-radius: 0;
+}
+
+.party:hover .party__cta,
+.party:focus-visible .party__cta {
+    color: #ffb6c1;
+    text-decoration-thickness: 2px;
+}
+
+/* BLACK SECTION - INTRODUCTION */
+
+.intro {
+    grid-column: 1;
+    grid-row: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 16px;
+
+    min-width: 0;
+    padding: 12px 6px;
+
+    background: #000;
+    color: #fff;
+    text-align: center;
+    
+}
+
+.intro__words {
+    font-size: var(--text-size);
+    line-height: 1.45;
+}
+
+.intro__words p {
+    margin: 0 0 6px;
+}
+
+/* PORTRAIT */
+
+.intro__portrait {
+    display: block;
+    width: calc(var(--art-width)*0.65);
+    aspect-ratio: 1/1.8;
+    margin: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.intro__portrait img {
+    display: block;
+    width: calc(100% / 0.8);
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: translateX(-15%);
+}
+
+.intro__portrait:hover {
+    background: transparent;
+}
+
+/* WHITE SECTION - DRAWING */
+
+.drawings {
+    grid-column: 1;
+    grid-row: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    padding: 12px 0;
+
+    background: #fff;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+}
+
+.drawings:hover,
+.drawings:focus-visible {
+    background: #fff;
+    color: #000;
+}
+
+.drawings__frame {
+    width: var(--art-width);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.drawings__frame img {
+    display: block;
+    width: var(--image-width);
+    max-height: 30dvh;
+    object-fit: contain;
+}
+
+.drawings__frame span {
+    display: block;
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: var(--text-size);
+    overflow-wrap: anywhere;
+}
+
+/* PORTRAIT ORIENTATION */
+
+@media (orientation: portrait) {
+
+    .home {
+        --image-width: min(70%, 220px, 22dvh);
+        --text-size: clamp(11px, 2.4vw, 16px);
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:
+            minmax(460px, 72dvh)
+            minmax(360px, auto);
+
+        min-height: calc(100dvh - 40px);
+    }
+
+    /* Pizza Party across the top */
+
+    .party {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .party__message {
+        width: min(90%, 500px);
+    }
+
+    /* Black lower-left section */
+
+    .intro {
+        grid-column: 1;
+        grid-row: 2;
+
+        min-height: 360px;
+        padding: 16px 6px;
+        gap: 16px;
+    }
+
+    /* White lower-right section */
+
+    .drawings {
+        grid-column: 2;
+        grid-row: 2;
+
+        min-height: 360px;
+        padding: 16px 0;
+    }
+
+
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (orientation: portrait) {
+    .home {
+        height: auto;
+        min-height: calc(100dvh - 40px);
+        overflow: visible;
+    }
+}
+
+
+@media (orientation: landscape) {
+
+    .intro {
+        gap: clamp(2px, 1dvh, 12px);
+        padding: 4px 6px;
+        overflow: hidden;
+    }
+
+
+.intro__words {
+    line-height: 1.2;
+}
+
+.intro__words p {
+    margin-bottom: 2px;
+}
+/*
+    .intro__portrait {
+    width: min(55%, 170px, 16dvh);*/
+}
+
+    .drawings {
+        overflow: hidden;
+        padding: 4px 0;
+    }
+
+    .drawings__frame {
+        gap: clamp(2px, 1dvh, 10px);
+    }
+
+    .drawings__frame img {
+        width: min(70%, 220px, 22dvh);
+        max-height: 30dvh;
+    }
+
+    .party__logo img {
+        max-width: min(400px, 55dvh);
+    }
+
+    .party__message {
+        padding: 8px 20px;
+    }
+}
